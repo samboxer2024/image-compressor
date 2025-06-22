@@ -1,24 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Image Compressor</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lyrics + Balloons</title>
+  <!-- Google Fonts & Font Awesome for music icon -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Image Compressor</h1>
-    <input type="file" id="imageInput" accept="image/*" />
-    <label for="quality">Compression Quality (0.1 - 1):</label>
-    <input type="number" id="quality" min="0.1" max="1" step="0.1" value="0.7" />
-    <button onclick="compressImage()">Compress</button>
-    <div id="output">
-      <h2>Compressed Image:</h2>
-      <img id="compressedImage" />
-      <a id="downloadLink" download="compressed.jpg">Download</a>
-    </div>
+  <!-- Video Background -->
+
+  <!-- Repeating Heading -->
+  <!-- <h1 id="heading">I'm Sorry Madam Ji</h1> -->
+
+  <video autoplay muted loop id="bgVideo">
+    <source src="./assets/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  
+  <!-- Glassmorphism Music Icon Button -->
+  <button id="startButton" title="Play Music">
+    <i class="fa-solid fa-music"></i>
+  </button>
+
+  <!-- Hidden Audio -->
+   
+  <audio id="audio" src="./assets/local.mp3"></audio>
+
+  <!-- Lyrics Container -->
+  <div id="lyricsContainer" class="lyrics-container"></div>
+
+  <div id="apologyCard" class="glass-card">
+    <p>
+     <h1>Heyy lady don!</h1> <br><br>
+      I am truly sorry for my mistakes. You mean a lot to me, and you known when you are happy I am also happy. I am sorry for my mistakes and I promise to be more careful in the future.
+    </p>
   </div>
-  <script src="script.js"></script>
+  
+  <!-- Balloon Container -->
+  <div class="balloons-container" id="balloonsContainer"></div>
+  
+  <!-- Message Button (Centered at Bottom) -->
+  <a href="message.html" id="messageButton">Maaf me here</a>
+
+  <script src="./js/script.js"></script>
+ 
+    
 </body>
 </html>
